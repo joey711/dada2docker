@@ -10,7 +10,7 @@ This repo contains docker build instructions for images:
 ## Quick Start
 
 1. [Install Docker](https://docs.docker.com/engine/installation/) if you haven't already.
-2. `docker run <DockerParams> joey/dada2-<ImageName>`
+2. `docker run <DockerParams> joey711/dada2-<ImageName>`
 
 ## Shiny-rstudio
 
