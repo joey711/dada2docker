@@ -7,10 +7,13 @@ This repo contains docker build instructions for images:
 - [rstudio-devel](https://github.com/joey711/dada2docker/tree/master/rstudio-devel) -- RStudio Server image with devel dada2 -- [joey711/dada2-rstudio-devel](https://hub.docker.com/r/joey711/dada2-rstudio-devel/)
 - [shiny-devel](https://github.com/joey711/dada2docker/tree/master/shiny-devel) -- Shiny-dada2 app pre-installed on Shiny-Server image -- [joey711/dada2-shiny-devel](https://hub.docker.com/r/joey711/dada2-shiny-devel/)
 
+
 ## Quick Start
 
 1. [Install Docker](https://docs.docker.com/engine/installation/) if you haven't already.
 2. `docker run <DockerParams> joey711/dada2-<ImageName>`
+3. When done: do `CTL-C` at the terminal, or `docker container kill <container name>`. `docker container ls` will show you the container name.
+
 
 ## Shiny-rstudio
 
@@ -20,8 +23,10 @@ To host RStudio Server with dada2-devel pre-installed
 docker run -d -p 8787:8787 -v ~:/home/rstudio/ joey711/dada2-rstudio-devel
 ```
 
-Where `~` can be replaced by a local (host) directory of your choice.
-You can also add `-v` args for making additional folders available in your Rstudio session.
+- Where `~` can be replaced by a local (host) directory of your choice.
+- You can also add `-v` args for making additional folders available in your Rstudio session.
+- Point a browser window to `0.0.0.0:8787` while the container is running to start working in RStudio.
+
 
 ## Shiny-dada2
 
@@ -35,5 +40,4 @@ docker run --rm -p 3838:3838 \
 
 - Where `~/Downloads/` should be replaced by a data directory on your machine that you want to "explore" with Shiny-dada2.
 - Point a browser window to `0.0.0.0:3838` while the container is running.
-- To end, do `CTL-C` at the terminal, or `docker container kill <container name>`. `docker container ls` will show you the name.
 
