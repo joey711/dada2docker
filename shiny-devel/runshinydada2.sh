@@ -12,4 +12,4 @@
 
 docker run --rm -p 3838:3838 \
     -v ~/Downloads/:/home/rstudio/Downloads/ \
-    shiny-devel
+    joey711/dada2-shiny-devel
